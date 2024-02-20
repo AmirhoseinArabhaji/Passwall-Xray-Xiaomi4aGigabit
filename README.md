@@ -1,6 +1,5 @@
 # Install Passwall + Xray core for Openwrt on Xiaomi 4a Gigabit
 
----
 
 ## ✅ Recommended Openwrt Version : 22.03.5
 
@@ -11,7 +10,6 @@
 
 ## Installation
 
----
 
 ### Run this command in openwrt remote ssh
 
@@ -28,7 +26,6 @@ This is mandatory because the xray core is too big to be installed on the router
 
 ## Types Support
 
----
 
 ### This Script can install one of the following cores:
 
@@ -47,7 +44,6 @@ This is mandatory because the xray core is too big to be installed on the router
 
 ## Features
 
----
 
 ⚡ Full Automatic installation Packages Just in one step
 
@@ -63,7 +59,6 @@ This is mandatory because the xray core is too big to be installed on the router
 
 ## To Do
 
----
 
 - [x] (Resolve Errors) I get some errors when installation, but it works fine
 - [x] Error in extracting custom panel (iam.zip)
@@ -76,7 +71,6 @@ This is mandatory because the xray core is too big to be installed on the router
 
 ## Credits
 
----
 
 This script is based on the work of
 [https://github.com/amirhosseinchoghaei/Passwall](https://github.com/amirhosseinchoghaei/Passwall)

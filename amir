@@ -1,0 +1,15 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start(){
+
+echo "Starting Service ... "
+
+/etc/init.d/passwall stop
+
+ping -c 3 127.0.0.1
+
+    sh /root/owo.sh
+
+}

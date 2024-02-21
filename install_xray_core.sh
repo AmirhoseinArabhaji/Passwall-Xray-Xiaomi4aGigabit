@@ -103,7 +103,7 @@ else
     
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/owo.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/owo.sh
 
 chmod 777 owo.sh
 
@@ -122,7 +122,7 @@ else
 fi
 
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/up.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/up.sh
 
 chmod 777 up.sh
 
@@ -141,7 +141,7 @@ else
     
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/timer.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/timer.sh
 
 chmod +x timer.sh
 
@@ -161,7 +161,7 @@ else
     
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/amir2
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir2
 
 chmod 777 amir2
 
@@ -190,7 +190,7 @@ else
 fi
 
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/amir
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir
 
 chmod +x /etc/init.d/amir
 
@@ -205,7 +205,7 @@ echo -e "${GREEN} almost done ... ${ENDCOLOR}"
 
 cd /tmp
 
-wget -q https://github.com/AmirhoseinArabhaji/Passwall/blob/main/iam.zip
+wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/blob/main/iam.zip
 
 unzip -o iam.zip -d /
 

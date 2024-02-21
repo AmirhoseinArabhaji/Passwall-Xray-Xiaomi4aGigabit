@@ -26,7 +26,7 @@ if [ "$RESULT" == "sing" ]; then
     
     cd /tmp
     echo "Downloading latest version of Sing-Box ..."
-    wget -q https://github.com/AmirhoseinArabhaji/Passwall/raw/main/sing.ipk
+    wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/raw/main/sing.ipk
     
     if [[ -f sing.ipk ]]
     
@@ -65,7 +65,7 @@ if [ "$RESULT" == "sing" ]; then
     
     cd /tmp
     
-    wget -q https://github.com/AmirhoseinArabhaji/Passwall/raw/main/iam.zip
+    wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/raw/main/iam.zip
     
     unzip -o iam.zip -d /
     
@@ -89,7 +89,7 @@ fi
 
 cd /tmp
 echo "Downloading latest version of Xray-core ..."
-wget -q https://github.com/AmirhoseinArabhaji/Passwall/raw/main/panel.ipk
+wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/raw/main/panel.ipk
 
 if [[ -f panel.ipk ]]
 
@@ -128,7 +128,7 @@ cd /root/
 
 cd /tmp
 
-wget -q https://github.com/AmirhoseinArabhaji/Passwall/raw/main/pass.ipk
+wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/raw/main/pass.ipk
 
 unzip -o iam.zip -d /
 

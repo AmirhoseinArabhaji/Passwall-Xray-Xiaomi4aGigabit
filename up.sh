@@ -22,7 +22,7 @@ cd /root/
 
 rm owo.sh
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/owo.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/owo.sh
 
 chmod 777 owo.sh
 
@@ -30,7 +30,7 @@ cd /etc/init.d/
 
 rm amir
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/amir
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir
 
 chmod +x /etc/init.d/amir
 

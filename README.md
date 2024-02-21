@@ -14,7 +14,7 @@
 ### Run this command in openwrt remote ssh
 
 ```
-rm -f install_passwallx.sh && wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/install_passwallx.sh && chmod 777 install_passwallx.sh && sh install_passwallx.sh
+rm -f install_passwallx.sh && wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/install_passwallx.sh && chmod 777 install_passwallx.sh && sh install_passwallx.sh
 ```
 
 Done !

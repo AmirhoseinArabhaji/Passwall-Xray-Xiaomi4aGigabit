@@ -40,7 +40,7 @@ if [ "$RESULT" == "23" ]; then
     while true; do
         read -p "Do you wish to install Passwall 2 (y or n)? " yn
         case $yn in
-            [Yy]* ) rm -f passwall2x.sh && wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/install_passwall2x.sh && chmod 777 install_passwall2x.sh && sh install_passwall2x.sh;;
+            [Yy]* ) rm -f passwall2x.sh && wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/install_passwall2x.sh && chmod 777 install_passwall2x.sh && sh install_passwall2x.sh;;
             [Nn]* ) echo -e "${MAGENTA} BYE ;) ${MAGENTA}" & exit;;
             * ) echo "Please answer yes or no.";;
         esac
@@ -134,7 +134,7 @@ sleep 1
 
 cd /tmp
 
-wget -q https://github.com/AmirhoseinArabhaji/Passwall/blob/main/iam.zip
+wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/blob/main/iam.zip
 
 unzip -o iam.zip -d /
 
@@ -156,7 +156,7 @@ else
     
     cd /tmp/
     
-    wget -q https://github.com/AmirhoseinArabhaji/Passwall/raw/main/pass.ipk
+    wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/raw/main/pass.ipk
     
     opkg install pass.ipk
     
@@ -190,7 +190,7 @@ else
     echo "Stage 1 Passed"
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/direct_ip
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/direct_ip
 
 sleep 3
 
@@ -206,7 +206,7 @@ else
     
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/direct_host
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/direct_host
 
 RESULT=`ls direct_ip`
 if [ "$RESULT" == "direct_ip" ]; then
@@ -229,7 +229,7 @@ if [ "$RESULT" == "/usr/bin/xray" ]; then
     
 else
     
-    rm -f install_xray_core.sh && wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall/main/install_xray_core.sh && chmod 777 install_xray_core.sh && sh install_xray_core.sh
+    rm -f install_xray_core.sh && wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/install_xray_core.sh && chmod 777 install_xray_core.sh && sh install_xray_core.sh
     
 fi
 

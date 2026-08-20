@@ -2,12 +2,12 @@
 
 start(){
 
-sh /root/owo.sh
+sh /root/ram_install_core.sh
 
 }
 
 reload(){
 
-sh /root/up.sh
+sh /root/self_update.sh
 
 }

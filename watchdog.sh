@@ -18,7 +18,7 @@ else
     logger -t check_internet "CORE failed"
     
     sleep 3
-    service amir start
+    service passwall-ramcore start
     
 fi
 

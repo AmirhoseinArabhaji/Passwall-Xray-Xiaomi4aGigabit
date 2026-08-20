@@ -19,6 +19,8 @@ rm -f install_passwallx.sh && wget https://raw.githubusercontent.com/AmirhoseinA
 
 Done !
 
+⚠️ OpenWrt 24.10+ / 25.x are not supported by this script yet (different package manager, `apk` instead of `opkg`). Use 22.03.3–22.03.5.
+
 ## How It Works
 
 Basically, this script will install the xray core on ram each time you reboot your router.
@@ -64,7 +66,13 @@ This is mandatory because the xray core is too big to be installed on the router
 - [x] Error in extracting custom panel (iam.zip)
 - [x] Rename `amir` and `amir2` to proper names
 - [x] Update `direct_ip` and `direct_host` files
+- [x] Fix dead `passwall.pub` signing key URL (mirrored in this repo as `passwall.pub` fallback)
+- [x] Fix `dnsmasq` removal order (was removed after `luci-app-passwall` install, causing a file clash)
+- [ ] Add OpenWrt 24.10+/25.x (apk) support
 
+## Testing changes
+
+The install script can be dry-run in an emulated OpenWrt 22.03.3 environment (real router rootfs, mipsel/QEMU-emulated, memory-capped) without touching real hardware — see [this guide](https://github.com/tonistiigi/binfmt) for the QEMU binfmt piece. Import the extracted squashfs rootfs from an official `.bin` firmware into Docker, register mipsel binfmt via `docker run --privileged --rm tonistiigi/binfmt --install mipsel`, then run the script inside a `--memory=128m` container to reproduce install-time failures before flashing a real device.
 
 ###
 ##### Feel free to contribute to this project by creating a pull request.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -63,7 +63,8 @@ opkg update
 
 # Add new okg key
 
-wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/ipk.pub || \
+wget -O passwall.pub https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/passwall.pub
 
 opkg-key add passwall.pub
 
@@ -82,12 +83,12 @@ done
 
 opkg update
 sleep 1
-opkg install luci-app-passwall
-sleep 1
-
 
 opkg remove dnsmasq
 sleep 1
+opkg install luci-app-passwall
+sleep 1
+
 opkg install ipset
 sleep 1
 opkg install ipt2socks
@@ -114,12 +115,6 @@ opkg install shadowsocks-libev-ss-redir
 sleep 1
 opkg install shadowsocks-libev-ss-server
 sleep 1
-opkg install shadowsocksr-libev-ssr-local
-sleep 1
-opkg install shadowsocksr-libev-ssr-redir
-sleep 1
-opkg install simple-obfs
-sleep 1
 opkg install boost-system
 sleep 1
 opkg install boost-program_options
@@ -134,7 +129,9 @@ sleep 1
 
 cd /tmp
 
-wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/blob/main/iam.zip
+opkg install unzip
+
+wget -q https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/iam.zip
 
 unzip -o iam.zip -d /
 
@@ -249,18 +246,18 @@ uci set passwall.@global[0].udp_node='tcp'
 
 uci commit passwall
 
-dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir' 'my.irancell.ir'
+uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir my.irancell.ir'
 
 uci commit
 
 echo -e "${YELLOW}** Warning : Router Will Be Rebooted ... **${ENDCOLOR}"
 
-sleep 5
-
-reboot
-
-rm install_passwallx.sh 2> /dev/null
+rm -f install_passwallx.sh
 
 /sbin/reload_config
 
 /etc/init.d/network reload
+
+sleep 5
+
+reboot

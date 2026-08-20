@@ -10,6 +10,6 @@ echo "Starting Service ... "
 
 ping -c 3 127.0.0.1
 
-    sh /root/owo.sh
+    sh /root/ram_install_core.sh
 
 }

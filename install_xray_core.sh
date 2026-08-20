@@ -91,81 +91,81 @@ sleep 2
 
 cd /root/
 
-if [[ -f owo.sh ]]
+if [[ -f ram_install_core.sh ]]
 
 then
-    
-    rm owo.sh
-    
+
+    rm ram_install_core.sh
+
 else
-    
+
     echo "Stage 3 Passed"
-    
+
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/owo.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/ram_install_core.sh
 
-chmod 777 owo.sh
+chmod 777 ram_install_core.sh
 
 sleep 1
 
-if [[ -f up.sh ]]
+if [[ -f self_update.sh ]]
 
 then
-    
-    rm up.sh
-    
+
+    rm self_update.sh
+
 else
-    
+
     echo "Stage 4 Passed"
-    
+
 fi
 
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/up.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/self_update.sh
 
-chmod 777 up.sh
+chmod 777 self_update.sh
 
 sleep 1
 
 
-if [[ -f timer.sh ]]
+if [[ -f watchdog.sh ]]
 
 then
-    
-    rm timer.sh
-    
+
+    rm watchdog.sh
+
 else
-    
+
     echo "Stage 5 Passed"
-    
+
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/timer.sh
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/watchdog.sh
 
-chmod +x timer.sh
+chmod +x watchdog.sh
 
 cd
 
 cd /sbin/
 
-if [[ -f amir ]]
+if [[ -f passwall-ramcore ]]
 
 then
-    
-    rm amir
-    
+
+    rm passwall-ramcore
+
 else
-    
+
     echo "Stage 6 Passed"
-    
+
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir2
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/passwall-ramcore-ctl
 
-chmod 777 amir2
+chmod 777 passwall-ramcore-ctl
 
-mv amir2 amir
+mv passwall-ramcore-ctl passwall-ramcore
 
 cd
 
@@ -177,24 +177,24 @@ sleep 1
 cd /etc/init.d/
 
 
-if [[ -f amir ]]
+if [[ -f passwall-ramcore ]]
 
 then
-    
-    rm amir
-    
+
+    rm passwall-ramcore
+
 else
-    
+
     echo "Stage 7 Passed"
-    
+
 fi
 
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir
+wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/passwall-ramcore
 
-chmod +x /etc/init.d/amir
+chmod +x /etc/init.d/passwall-ramcore
 
-/etc/init.d/amir enable
+/etc/init.d/passwall-ramcore enable
 
 cd /root/
 
@@ -205,7 +205,7 @@ echo -e "${GREEN} almost done ... ${ENDCOLOR}"
 
 cd /tmp
 
-wget -q https://github.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/blob/main/iam.zip
+wget -q https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/iam.zip
 
 unzip -o iam.zip -d /
 
@@ -292,13 +292,13 @@ esac
 
 ##EndConfig
 
-/etc/init.d/amir start
+/etc/init.d/passwall-ramcore start
 
 
 sleep 1
 
 >/var/spool/cron/crontabs/root
-echo "*/1 * * * * sh /root/timer.sh" >> /var/spool/cron/crontabs/root
+echo "*/1 * * * * sh /root/watchdog.sh" >> /var/spool/cron/crontabs/root
 echo "30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /var/spool/cron/crontabs/root
 
 /etc/init.d/cron restart
@@ -308,14 +308,14 @@ echo "30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /var/spool/cron/cro
 cd
 
 
-dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir' 'my.irancell.ir'
+uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir my.irancell.ir'
 
 uci commit dhcp
 
 /sbin/reload_config
 
 
-if [[ -f owo.sh ]]
+if [[ -f ram_install_core.sh ]]
 
 then
     
@@ -330,7 +330,7 @@ fi
 cd /etc/init.d/
 
 
-if [[ -f amir ]]
+if [[ -f passwall-ramcore ]]
 
 then
     
